@@ -1,22 +1,34 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-var INTERP_BASE = "./static/interpolation/demo_video_full";
-var NUM_INTERP_FRAMES = 108;
+function createInterpolationSection(wrapperId, sliderId, basePath, numFrames) {
+  var interpImages = [];
 
-var interp_images = [];
-function preloadInterpolationImages() {
-  for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = INTERP_BASE + '/' + String(i).padStart(4, '0') + '.png';
-    interp_images[i] = new Image();
-    interp_images[i].src = path;
+  function preloadInterpolationImages() {
+    for (var i = 0; i < numFrames; i++) {
+      var path = basePath + '/' + String(i).padStart(4, '0') + '.png';
+      interpImages[i] = new Image();
+      interpImages[i].src = path;
+    }
   }
-}
 
-function setInterpolationImage(i) {
-  var image = interp_images[i];
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
+  function setInterpolationImage(i) {
+    var image = interpImages[i];
+    image.ondragstart = function() { return false; };
+    image.oncontextmenu = function() { return false; };
+    $('#' + wrapperId).empty().append(image);
+  }
+
+  // Preload images and set up slider behavior
+  $(document).ready(function() {
+    preloadInterpolationImages();
+
+    $('#' + sliderId).on('input', function(event) {
+      setInterpolationImage(this.value);
+    });
+
+    setInterpolationImage(0);
+    $('#' + sliderId).prop('max', numFrames - 1);
+  });
 }
 
 
@@ -58,20 +70,9 @@ $(document).ready(function() {
     	});
     }
 
-    /*var player = document.getElementById('interpolation-video');
-    player.addEventListener('loadedmetadata', function() {
-      $('#interpolation-slider').on('input', function(event) {
-        console.log(this.value, player.duration);
-        player.currentTime = player.duration / 100 * this.value;
-      })
-    }, false);*/
-    preloadInterpolationImages();
+    createInterpolationSection('interpolation-image-wrapper-1', 'interpolation-slider-1', './static/interpolation/demo_video_1', 108);
 
-    $('#interpolation-slider').on('input', function(event) {
-      setInterpolationImage(this.value);
-    });
-    setInterpolationImage(0);
-    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+    createInterpolationSection('interpolation-image-wrapper-2', 'interpolation-slider-2', './static/interpolation/demo_video_2', 107);
 
     bulmaSlider.attach();
 
