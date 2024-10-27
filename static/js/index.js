@@ -74,7 +74,7 @@ $(document).ready(function() {
 
     createInterpolationSection('interpolation-image-wrapper-2', 'interpolation-slider-2', './static/interpolation/demo_video_2', 107);
 
-    createInterpolationSection('interpolation-image-wrapper-3', 'interpolation-slider-3', './static/interpolation/demo_video_3', 74);
+    createInterpolationSection('interpolation-image-wrapper-3', 'interpolation-slider-3', './static/interpolation/demo_video_3', 92);
 
     bulmaSlider.attach();
 
