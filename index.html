@@ -262,7 +262,7 @@
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-3">Video</h2> -->
         <div class="publication-video">
-          <video src="static/videos/demo.mp4" controls autoplay muted loop
+          <video src="static/videos/demo.mp4" controls autoplay muted
                 style="width: 100%; height: auto;">
             Your browser does not support the video tag.
           </video>
@@ -311,10 +311,16 @@
           </p> 
           <ul> 
             <li> 
-              The first is a top-down map of the scene. Light green areas indicate explored regions, light grey areas represent unexplored regions, and black areas denote obstacles. 
+              The first is a top-down map of the scene. The notations in the top-down map are explained in the following:
+              <!-- Light green areas indicate explored regions, light grey areas represent unexplored regions, and black areas denote obstacles. 
               Each purple arrow marks a frontier with its direction. A circular sector and the enclosed dots of the same color represent a memory snapshot, 
               where each dot corresponds to an object in that snapshot, and the center of the sector is the observation position of the memory snapshot. 
-              The red star shows the target location the agent is currently navigating towards. 
+              The red star shows the target location the agent is currently navigating towards.  -->
+
+              <div class="legend">
+                <img src="static/images/legend.png" alt="Legend for Top-down Map" />
+              </div>
+
             </li> 
             <li> 
               The second illustration shows the agent's egocentric view from its current position. 
