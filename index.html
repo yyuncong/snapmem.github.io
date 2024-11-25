@@ -276,7 +276,7 @@
     <!--/ Paper video. -->
 
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column" style="max-width: 60%; margin: 0 auto;">
         <h2 class="title is-3" style="padding-top: 80px;">Abstract</h2>
         <div class="content has-text-justified">
@@ -285,12 +285,30 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Abstract. -->
 
     
   </div>
 </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Constructing compact and informative 3D scene representations is essential for effective embodied exploration and reasoning, especially in complex environments over long periods. Existing scene representations, such as object-centric 3D scene graphs, have significant limitations. They oversimplify spatial relationships by modeling scenes as individual objects, with inter-object relationships described by restrictive texts, making it difficult to answer queries that require nuanced spatial understanding. Furthermore, these representations lack natural mechanisms for active exploration and memory management, which hampers their application to lifelong autonomy. In this work, we propose SnapMem, a novel snapshot-based scene representation serving as 3D scene memory for embodied agents. SnapMem employs informative images, termed Memory Snapshots, to capture rich visual information of explored regions. It also integrates frontier-based exploration by introducing Frontier Snapshots—glimpses of unexplored areas—that enable agents to make informed exploration decisions by considering both known and potential new information. Meanwhile, to support lifelong memory in active exploration settings, we further present an incremental construction pipeline for SnapMem, as well as an effective memory retrieval technique for memory management. Experimental results on three benchmarks demonstrate that SnapMem significantly enhances agents' exploration and reasoning capabilities in 3D environments over extended periods, highlighting its potential for advancing applications in embodied AI.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -301,7 +319,7 @@
         <h3 class="title is-4">How to unleash the power of VLM agents in lifelong exploration and reasoning?</h3>
         <h4 class="title is-5" style="padding-top: 20px;">1. Incremental Construction of Scene Memory</h4>
 
-        <video style="transform: scale(1.2); width: 80%; pointer-events: none; padding-top: 30px; padding-bottom: 40px;" autoplay muted loop>
+        <video style="transform: scale(1.2); width: 80%; padding-top: 30px; padding-bottom: 40px;" autoplay muted loop playsinline preload="auto">
           <source src="static/videos/demo_gif_1.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -318,7 +336,7 @@
         </div>
         <h4 class="title is-5" style="padding-top: 30px;">2. Retrieval and Utilization of Scene Memory</h4>
 
-        <video style="width: 80%; pointer-events: none; padding-top: 0px; padding-bottom: 10px;" autoplay muted loop>
+        <video style="width: 80%; padding-top: 0px; padding-bottom: 10px;" autoplay muted loop playsinline preload="auto">
           <source src="static/videos/demo_gif_2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
