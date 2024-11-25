@@ -297,6 +297,41 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Methodology. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">How to empower VLM agents with lifelong exploration and reasoning abilities?</h3>
+        <h4 class="title is-5">Incremental Construction of Snapshot-Based Scene Memory During Exploration</h4>
+        <div class="content has-text-justified">
+          <p>
+            At each timestep, given a stream of egocentric views, <strong>SnapMem</strong> performs the following steps:
+          </p>
+          <ol style="text-align: left;">
+            <li><strong>Constructs new object nodes and frame-object mappings</strong> using ConceptGraphs.</li>
+            <li><strong>Adds newly detected objects</strong> to the set of all objects.</li>
+            <li><strong>Updates the snapshot-based memory</strong> for explored regions using our proposed Co-Visibility Clustering algorithm.</li>
+          </ol>
+        </div>
+        <h4 class="title is-5">Retrieval and Utilization of Scene Memory for Lifelong Exploration and Reasoning</h4>
+        <div class="content has-text-justified">
+          <p>
+            In tasks such as Embodied Question Answering, the snapshot-based scene memory is efficiently filtered using our memory retrieval mechanism, <strong>Prefiltering</strong>. The VLM agent then leverages:
+          </p>
+          <ul style="text-align: left;">
+            <li><em>Memory Snapshots</em>—filtered scene memory containing rich visual and spatial information.</li>
+            <li><em>Frontier Snapshots</em>—glimpses of unexplored regions indicating potential areas of interest.</li>
+          </ul>
+          <p>
+            By utilizing these snapshots, the agent makes informed decisions to effectively explore the environment and accomplish its objectives.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Methodology. -->
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -304,7 +339,7 @@
     <!-- Demo -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Demo</h2>
+        <h2 class="title is-3">Demos</h2>
 
         <!-- Interpolating. -->
         <!-- <h3 class="title is-4">Interpolating states</h3> -->
