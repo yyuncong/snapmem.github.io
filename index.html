@@ -304,18 +304,30 @@
       <div class="column is-full-width">
         <!-- <h3 class="title is-4">How to empower VLM agents with lifelong exploration and reasoning abilities?</h3> -->
         <h3 class="title is-4">How to unleash the power VLM agents in lifelong exploration and reasoning?</h3>
-        <h4 class="title is-5">Incremental Construction of Snapshot-Based Scene Memory During Exploration</h4>
+        <h4 class="title is-5" style="padding-top: 20px;">Incremental Construction of Snapshot-Based Scene Memory During Exploration</h4>
+
+        <video width="3600" height="1600" style="transform: scale(1.2); width: 100%; pointer-events: none; padding-top: 30px; padding-bottom: 40px;" autoplay muted loop>
+          <source src="static/videos/demo_gif_1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
         <div class="content has-text-justified">
           <p>
             At each timestep, given a stream of egocentric views, <strong>SnapMem</strong> performs the following steps:
           </p>
           <ol style="text-align: left;">
-            <li><strong>Constructs new object nodes and frame-object mappings</strong> using ConceptGraphs.</li>
+            <li><strong>Detect object instances and construct object nodes</strong> in the observations at each step.</li>
             <li><strong>Adds newly detected objects</strong> to the set of all objects.</li>
             <li><strong>Updates the snapshot-based memory</strong> for explored regions using our proposed Co-Visibility Clustering algorithm.</li>
           </ol>
         </div>
-        <h4 class="title is-5">Retrieval and Utilization of Scene Memory for Lifelong Exploration and Reasoning</h4>
+        <h4 class="title is-5" style="padding-top: 30px;">Retrieval and Utilization of Scene Memory for Lifelong Exploration and Reasoning</h4>
+
+        <video width="2700" height="1900" style="width: 80%; pointer-events: none; padding-top: 0px; padding-bottom: 10px;" autoplay muted loop>
+          <source src="static/videos/demo_gif_2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
         <div class="content has-text-justified">
           <p>
             In tasks such as Embodied Question Answering, the snapshot-based scene memory is efficiently filtered using our memory retrieval mechanism, <strong>Prefiltering</strong>. The VLM agent then leverages:
