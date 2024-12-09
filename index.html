@@ -2,11 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="description">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SnapMem: Snapshot-based 3D Scene Memory for Embodied Exploration and Reasoning</title>
+  <title>3D-Mem: 3D Scene Memory for Embodied Exploration and Reasoning</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-06E12DG85Q"></script>
@@ -89,8 +88,8 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <!-- <h1 class="title is-1 publication-title">SnapMem: Snapshot-based 3D Scene Memory for Embodied Exploration and Reasoning</h1> -->
-          <h1 class="title is-1 publication-title" style="font-size: 2.75rem;">
-            SnapMem: Snapshot-based 3D Scene Memory for Embodied Exploration and Reasoning
+          <h1 class="title is-1 publication-title">
+            3D-Mem: 3D Scene Memory for Embodied Exploration and Reasoning
           </h1>          
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -303,7 +302,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Constructing compact and informative 3D scene representations is essential for effective embodied exploration and reasoning, especially in complex environments over long periods. Existing scene representations, such as object-centric 3D scene graphs, have significant limitations. They oversimplify spatial relationships by modeling scenes as individual objects, with inter-object relationships described by restrictive texts, making it difficult to answer queries that require nuanced spatial understanding. Furthermore, these representations lack natural mechanisms for active exploration and memory management, which hampers their application to lifelong autonomy. In this work, we propose SnapMem, a novel snapshot-based scene representation serving as 3D scene memory for embodied agents. SnapMem employs informative images, termed Memory Snapshots, to capture rich visual information of explored regions. It also integrates frontier-based exploration by introducing Frontier Snapshots—glimpses of unexplored areas—that enable agents to make informed exploration decisions by considering both known and potential new information. Meanwhile, to support lifelong memory in active exploration settings, we further present an incremental construction pipeline for SnapMem, as well as an effective memory retrieval technique for memory management. Experimental results on three benchmarks demonstrate that SnapMem significantly enhances agents' exploration and reasoning capabilities in 3D environments over extended periods, highlighting its potential for advancing applications in embodied AI.
+            Constructing compact and informative 3D scene representations is essential for effective embodied exploration and reasoning, especially in complex environments over extended periods. Existing representations, such as object-centric 3D scene graphs, oversimplify spatial relationships by modeling scenes as isolated objects with restrictive textual relationships, making it difficult to address queries requiring nuanced spatial understanding. Moreover, these representations also lack natural mechanisms for active exploration and memory management, hindering their application to lifelong autonomy. In this work, we propose 3D-Mem, a novel 3D scene memory framework for embodied agents. 3D-Mem employs informative multi-view images, termed Memory Snapshots, to represent the scene and capture rich visual information of explored regions. It further integrates frontier-based exploration by introducing Frontier Snapshots—glimpses of unexplored areas—enabling agents to make informed decisions by considering both known and potential new information. To support lifelong memory in active exploration settings, we present an incremental construction pipeline for 3D-Mem, as well as a memory retrieval technique for memory management. Experimental results on three benchmarks demonstrate that 3D-Mem significantly enhances agents' exploration and reasoning capabilities in 3D environments, highlighting its potential for advancing applications in embodied AI.
           </p>
         </div>
       </div>
@@ -320,7 +319,7 @@
       <div class="column is-full-width">
         <!-- <h3 class="title is-4">How to empower VLM agents with lifelong exploration and reasoning abilities?</h3> -->
         <h3 class="title is-4" style="font-size: 1.46rem;">How to unleash the power of VLM agents in lifelong exploration and reasoning?</h3>
-        <h4 class="title is-5" style="padding-top: 20px; font-size: 1.2rem;">1. Incremental Construction of Scene Memory</h4>
+        <h4 class="title is-5" style="padding-top: 20px; font-size: 1.2rem;">1. Incremental Construction of 3D Scene Memory</h4>
 
         <video style="transform: scale(1.2); width: 80%; padding-top: 30px; padding-bottom: 40px;" autoplay muted loop playsinline preload="auto">
           <source src="static/videos/demo_gif_1.mp4" type="video/mp4">
@@ -328,16 +327,16 @@
         </video>
 
         <div class="content has-text-justified">
-          <p>
+          <!-- <p>
             At each timestep, given a stream of egocentric views, <strong>SnapMem</strong> performs the following steps:
-          </p>
+          </p> -->
           <ol style="text-align: left;">
-            <li><strong>Detect object instances and construct object nodes</strong> in the observations at each step.</li>
-            <li><strong>Adds newly detected objects</strong> to the set of all objects.</li>
-            <li><strong>Updates the snapshot-based memory</strong> for explored regions using our proposed Co-Visibility Clustering algorithm.</li>
+            <li>Detect object instances and construct object nodes.</li>
+            <li>Adds newly detected objects.</li>
+            <li>Updates 3D scene memory using the Co-Visibility Clustering algorithm.</li>
           </ol>
         </div>
-        <h4 class="title is-5" style="padding-top: 30px; font-size: 1.2rem;">2. Retrieval and Utilization of Scene Memory</h4>
+        <h4 class="title is-5" style="padding-top: 30px; font-size: 1.2rem;">2. Retrieval and Reasoning of 3D Scene Memory</h4>
 
         <video style="width: 80%; padding-top: 0px; padding-bottom: 10px;" autoplay muted loop playsinline preload="auto">
           <source src="static/videos/demo_gif_2.mp4" type="video/mp4">
@@ -346,15 +345,12 @@
 
         <div class="content has-text-justified">
           <p>
-            In tasks such as Embodied Question Answering, the snapshot-based scene memory is efficiently filtered using our memory retrieval mechanism, <strong>Prefiltering</strong>. The VLM agent then leverages:
+            The 3D scene memory is efficiently filtered using <strong>Prefiltering</strong>. The VLM agent then leverages:
           </p>
           <ul style="text-align: left;">
-            <li><em>Memory Snapshots</em>—filtered scene memory containing rich visual and spatial information.</li>
-            <li><em>Frontier Snapshots</em>—glimpses of unexplored regions indicating potential areas of interest.</li>
+            <li><em>Memory Snapshots</em>—filtered scene memory for explored regions.</li>
+            <li><em>Frontier Snapshots</em>—glimpses of unexplored regions.</li>
           </ul>
-          <p>
-            By utilizing these snapshots, the agent makes informed decisions to effectively explore the environment and accomplish its objectives.
-          </p>
         </div>
       </div>
     </div>
