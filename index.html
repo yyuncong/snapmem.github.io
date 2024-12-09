@@ -364,28 +364,34 @@
     <!-- Demo -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Demos</h2>
+        <h2 class="title is-3">Embodied Q&A Demos</h2>
 
         <!-- Interpolating. -->
         <!-- <h3 class="title is-4">Interpolating states</h3> -->
         <div class="content has-text-justified">
-          <p> 
+          <!-- <p> 
             We present demos of <strong>Embodied Q&A</strong> in <strong>lifelong</strong> exploration scenarios. 
             The agent is initialized at a specific location in an unknown environment and tasked with <strong>answering a series of questions</strong>. 
             The agent either selects a frontier to explore or uses the scene memory to reason about the questions. 
-          </p> 
+          </p>  -->
           <p> 
             Each demo represents an exploration episode in a Habitat-sim scene, where the agent is required to answer 6-8 questions in sequence. 
-            In each frame, the current question is displayed at the top, followed by four columns of illustrations: 
-          </p> 
-          <ul> 
-            <li> 
-              <strong>Top-down map.</strong> The notations in the top-down map are explained in the following:
+            <!-- In each frame, the current question is displayed at the top, followed by four columns of illustrations:  -->
+          </p>
+          <p>
+            <strong>Top-down map.</strong> The notations are explained in the following:
               <!-- Light green areas indicate explored regions, light grey areas represent unexplored regions, and black areas denote obstacles. 
               Each purple arrow marks a frontier with its direction. A circular sector and the enclosed dots of the same color represent a memory snapshot, 
               where each dot corresponds to an object in that snapshot, and the center of the sector is the observation position of the memory snapshot. 
               The red star shows the target location the agent is currently navigating towards.  -->
 
+              <div class="legend">
+                <img src="static/images/legend.png" alt="Legend for Top-down Map" />
+              </div>
+          </p>
+          <!-- <ul> 
+            <li> 
+              <strong>Top-down map.</strong> The notations in the top-down map are explained in the following:
               <div class="legend">
                 <img src="static/images/legend.png" alt="Legend for Top-down Map" />
               </div>
@@ -401,7 +407,7 @@
               <strong>All relevant snapshots.</strong> All the current frontier snapshots at the top and all the filtered memory snapshot at the bottom. 
               The highlighted snapshot is the choice at the current step.
             </li> 
-          </ul>
+          </ul> -->
         </div>
 
         <!-- <div class="columns is-vcentered interpolation-panel" style="margin-top: 10mm;">
