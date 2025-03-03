@@ -38,6 +38,19 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    /* Optionally, ensure there is no clipping in publication-video containers */
+    .publication-video {
+      overflow: visible; /* or overflow: auto */
+    }
+    
+    /* Enforce video scaling rules */
+    .publication-video video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
@@ -486,44 +499,46 @@
           </p>
         </div>
     
-        <!-- Videos side-by-side -->
-        <div class="columns is-centered has-text-centered">
-          <!-- Column for first video -->
-          <div class="column">
-            <div class="publication-video">
-              <video src="static/videos/topdown1.mp4" controls autoplay muted 
-                      style="width: 100%; height: auto;">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-    
-          <!-- Column for second video -->
-          <div class="column">
-            <div class="publication-video">
-              <video src="static/videos/topdown2.mp4" controls autoplay muted 
-                      style="width: 100%; height: auto;">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-    
-          <!-- Column for third video -->
-          <div class="column">
-            <div class="publication-video">
-              <video src="static/videos/topdown3.mp4" controls autoplay muted 
-                      style="width: 100%; height: auto;">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+        <!-- Single row of columns for all three videos -->
+    <div class="columns is-centered has-text-centered">
+
+      <!-- Column #1 -->
+      <div class="column">
+        <div class="publication-video">
+          <video controls autoplay muted
+                 style="display: block; width: 100%; height: auto;">
+            <source src="static/videos/topdown1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
-        <!--/ Videos side-by-side -->
+      </div>
+
+      <!-- Column #2 -->
+      <div class="column">
+        <div class="publication-video">
+          <video controls autoplay muted
+                 style="display: block; width: 100%; height: auto;">
+            <source src="static/videos/topdown2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Column #3 -->
+      <div class="column">
+        <div class="publication-video">
+          <video controls autoplay muted
+                 style="display: block; width: 100%; height: auto;">
+            <source src="static/videos/topdown3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
         
   </div>
 </section>
 
-<section class="section" id="BibTeX">
+<section class="section" id="BibTeX" style="margin-top: 30mm;">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@misc{yang20243dmem3dscenememory,
